@@ -1,0 +1,15 @@
+body{
+font-family:"Bellefair" !important;
+}
+.navbarlogo{
+margin-left: -90px;
+}
+.navlinksty{
+margin-right: 300px;
+}
+.navlinksty li{
+padding-left:15px;
+}
+.iconstyle{
+ padding-right: -50px;
+}
