@@ -1,15 +1,113 @@
-body{
-font-family:"Bellefair" !important;
+body {
+    font-family: "Bellefair" !important;
 }
-.navbarlogo{
-margin-left: -90px;
+.navbar-brand img{
+    margin-left: -80px;
 }
-.navlinksty{
-margin-right: 300px;
+.navbarstyle{
+    padding-right: 190px;
 }
-.navlinksty li{
-padding-left:15px;
+.linkstyle{
+    padding-left: 10px;
+    color: black;
 }
-.iconstyle{
- padding-right: -50px;
+.paddingstyle1{
+    margin-right: -280px;
+    margin-top: 10px;
+}
+.paddingstyle{
+    margin-left: 200px;
+    margin-right: 10px;
+}
+.btnstyle{
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #29743a;
+    border-radius: 20px;
+    padding: 5px 6px;
+    background-color: #29743a;
+}
+.hero-section {
+    padding: 20px 0;
+    height: 100vh;
+}
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 600px;
+    margin-top: -90px;
+}
+.hero-section p{
+    font-size: 1rem;
+}
+.hero-section .highlight {
+    color: #29743a;
+}
+.hero-section .text-red {
+    color: red;
+}
+.search-bar {
+    display: flex;
+    gap: 10px;
+}
+.search-bar select,
+.search-bar input {
+    flex-grow: 1;
+}
+.property-image img {
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    padding-top: 60px;
+}
+.btn-group {
+    margin-bottom: 15px;
+}
+.btngroup1 {
+    margin-bottom: -8px;
+    border: 1px solid rgb(236, 236, 236);
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+    margin-right: 200px;
+    margin-left: 2px;
+    background-color: rgb(236, 236, 236);
+}
+.btnstyle1{
+    background-color: rgb(236, 236, 236);
+    border: 1px solid rgb(236, 236, 236);
+    margin-left:25px;
+    padding: 9px 15px;
+    border-top-left-radius: 10px ;
+}
+
+.btnstyle1:active{
+    background-color: #0a5d42;
+    border-color: #0a5d42;
+}
+
+
+
+
+
+
+.experience-banner {
+    background-color: #0a5d42;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+.stats1{
+    font-size: 1.7rem;
+    padding-left: 60px;
+}
+.stats2{
+    padding-right:60px;
+}
+.stats3{
+    padding-right: 30px;
+}
+
+.stats {
+    font-weight: bold;
+    font-size: 1.3rem;
 }
