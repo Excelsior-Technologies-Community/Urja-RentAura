@@ -274,3 +274,150 @@ margin-right: 420px;
 opacity: 0.5;
 pointer-events: none;
 }
+
+
+
+
+
+
+
+.page-wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 60vh;
+margin-top: 30px;
+}
+.content-box {
+text-align: center;
+}
+.box-content{
+font-size: 3.6rem;
+font-weight: bold;
+}
+.box-text{
+color: rgb(77, 77, 77);
+font-size: 1.1rem;
+padding-top: 10px;
+padding-bottom: 20px;
+}
+.highlight-text {
+color: #165836;
+font-weight: bold;
+}
+.btn-custom {
+background-color: #165836 ;
+color: white;
+padding: 12px 25px;
+border-radius: 10px;
+text-decoration: none;
+font-weight: 600;
+}
+.btn-custom:hover {
+background-color: #165836;
+color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.bg-image {
+background: url('img2/Why Choose Us (1).png') no-repeat center center/cover;
+height: 100vh;
+}
+.listing-container {
+margin-top: 50px;
+background: white;
+padding: 20px;
+border-radius: 15px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.choose-us-heading{
+font-weight: bold;
+}
+.choose-us-text a{
+color: black;
+}
+.back-style{
+background-color: rgb(241, 239, 239);
+border-color: rgb(241, 239, 239) !important;
+}
+.icon-border{
+border: 1px solid rgb(255, 255, 255);
+background-color: white;
+padding: 10px;
+border-radius: 20px;
+}
+
+
+
+
+
+
+
+.faq-text{
+font-size: 1.2rem;
+padding-left: 120px;
+text-align: left !important;
+}
+.faq-button {
+border: 1px solid black !important;
+background-color: white;
+border-radius: 12px !important;
+padding: 10px 25px !important;
+margin-left: 110px;
+}
+
+
+
+
+
+
+.listing-card1 {
+border: none !important;
+}
+.listing-img1 {
+width: 354px !important;
+height: 300px;
+padding: 10px;
+}
+.boxstyle1{
+background-color: rgb(247, 245, 245) !important; 
+border: 1px solid rgb(247, 245, 245) !important;     
+border-radius: 10px;
+padding: 7px 10px;
+}
+.top-listing-badge1 {
+position: absolute;
+top: 25px;
+left: 20px;
+background-color: rgb(238, 47, 47);
+color: white;
+font-size: 12px;
+padding: 5px 10px;
+border-radius: 15px;
+}
+.price1 {
+font-weight: bold;
+font-size: 2rem;
+text-align: left;
+}
+.price1 .dollar1 {
+color: black;
+}
+.price1 .usd1 {
+color: rgb(11, 94, 18);
+}
+.icon-green1 {
+color: rgb(11, 94, 18);
+}
+.icon-red1 {
+color: red;
+}
