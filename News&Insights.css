@@ -124,114 +124,45 @@ padding-left: 40px !important;
 
 
 
-.contact-us{
-height: 50vh;
+
+
+.liststyle1{
+margin-top: 40px !important;
+margin-left: 70px !important;
 }
-.contact-heading{
-font-size: 3rem;
-}
-.contact-text{
-font-size: 1.3rem;
-color: #666666;
-padding-top: 20px;
+li::marker{
+color: lightgray;
 }
 
 
 
 
 
-.info-card {
+.content-section {
+padding: 0px 0;
+}
+.content-box {
 text-align: left;
-padding: 30px;
-border-radius: 12px;
 }
-.icon-container {
-background-color: #f3f3f3;
-border-radius: 25%;
-width: 60px;
-height: 60px;
-display: flex;
-align-items: center;
-justify-content: center;
-margin-bottom: 15px;
+.content-box2 {
+text-align: left;
+padding-left: 60px !important;
 }
-.icon-container i {
-font-size: 24px;
-color: #2e614f;
-}
-.info-title {
-font-weight: 700;
-color: #2e614f;
+.content-title {
+font-weight: bold;
 margin-bottom: 10px;
-font-size: 1.5rem;
 }
-.info-text {
-color: #6c757d;
-}
-
-
-
-
-
-
-.Advertising{
-padding-top: 50px;
-}
-.header-title {
-font-weight: 700;
-color: #000000;
-margin-bottom: 15px;
-font-size: 2.5rem;
-}
-.header-text{
-font-size: 1.2rem;
-color: #666666;
-}
-.highlight-link {
-color: #0E694B;
-font-weight: 600;
-text-decoration: underline;
-}
-.form-container {
-background-color: #ffffff;
-padding: 30px;
-}
-.form-label{
-color: #666666;
-}
-.form-control{
-border-radius: 15px !important;
-padding: 12px !important;
-border-color: #666666 !important;
-}
-.form-control::placeholder{
-color: #B8B8B8 !important;
-}
-.form-select{
-border-radius: 15px !important;
-padding: 12px !important;
-border-color: #666666 !important;
-color: #B8B8B8 !important;
-}
-.btnsubmit {
-background-color: #1c5d42;
-color: #fff;
-border: none;
-padding: 10px 27px;
-border-radius: 15px;
-text-decoration: none;
-}
-.end-text p{
+.content-box p{
 font-size: 1.1rem;
-width: 500px;
-color: #666666;
-padding-left: 30px;
+color: rgb(104, 103, 103);
+padding-top: 10px;
 }
-.end-text a{
-text-decoration: none;
-color: #0E694B;
-font-size: 1.2rem;
-}
+
+
+
+
+
+
 
 
 
@@ -240,60 +171,57 @@ font-size: 1.2rem;
 
 
 .blog-container {
-max-width: 1200px;
 margin: 0 auto;
 }
-.blog-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 20px;
-padding-top: 50px;
-}
-.blog-header h2 {
-font-weight: bold;    
-font-size: 3rem;
-}
 .blog-card img {
-width: 100%;
-height: 200px;
+width: 550px;
+height: 400px;
 object-fit: cover;
 border-radius: 10px;
-border: 1px solid #ddd;
 }
 .blog-card {
 background: #fff;
-padding: 15px;
-text-align: left;
+padding-top: 30px;
 }
 .blog-card h5 {
 font-weight: bold;
-font-size: 1.5rem;
+font-size: 1.6rem;
+padding-bottom: 10px;
 }
 .read-more {
 color: #144d19;
 font-weight: bold;
 text-decoration: none;
 }
-.pagination {
-display: inline-block;
-padding-left: 450px !important;
-margin-top:40px !important;
-}
-.pagination-text{
-text-align: center;
-padding-top: 20px;
-}
-.pagination a {
-float: left;
-padding: 8px 16px;
-text-decoration: none;
-transition: background-color .3s;
-border: 1px solid #ddd;
-margin: 0 30px;
-border-radius: 10px;
+.read-more i{
+    padding-left: 20px !important;
 }
 
+
+
+
+
+
+.search-Nearby{
+    background-color: white;
+    }
+    .Nearby h1{
+    color: green;
+    font-weight: bold;
+    font-size: 2rem;
+    }
+    .Nearby h2{
+    color: rgb(69, 67, 67);
+    font-weight: bold;
+    }
+    .liststyle3{
+    color: rgb(106, 104, 104);
+    font-size: 19px;
+    }
+    .liststyle3 li{
+    padding-top: 5px;
+    padding-left: 10px;
+    }
 
 
 
