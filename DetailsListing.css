@@ -644,3 +644,19 @@ color: rgb(172,170,170);
     padding-left: 10px;
     }
     
+
+
+
+
+
+
+
+    .section-title {
+        font-weight: bold;
+        color: #166534;
+        margin-top: 20px;
+    }
+    .stats-container {
+        max-width: 900px;
+        margin: auto;
+    }
