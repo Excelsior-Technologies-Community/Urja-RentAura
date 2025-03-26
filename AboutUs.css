@@ -391,3 +391,64 @@ padding-left: 20px;
 padding-left: 60px;
 color: rgb(172,170,170);
 }
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .paddingstyle{
+        margin-left: 10px;
+        margin-right: 10px;
+        }
+    .about-text{
+        text-align: center;
+    }
+    .experience{
+        text-align: left !important;
+        padding-bottom: 20px;
+    }
+    .content-box2 {
+        padding-left: 10px !important;
+        }
+        .press-content p{
+            padding-left: 0px;
+        }
+        .logos img{
+            margin: 10px 1px;
+            max-height: 40px;
+            padding-right: 10px;
+        }
+        .logos div{
+            text-align: left;
+        }
+        .image-container img.small-img{
+            left: 10%;
+            bottom: 30%;
+        }
+        .btn-section{
+            flex-direction: column;
+        }
+        .btn-section p{
+            text-align: left;
+            flex-direction: column;
+        }
+        .btnmore1{
+            padding: 10px 210px;
+        }
+        .btnmore1-margin{
+            margin-top: 30px;
+            margin-left: -30px;
+        }
+        .footer-last{
+            text-align: left;
+            margin-left: -70px !important;
+            flex-direction: column;
+        }
+        .footer-copy{
+            text-align: left;
+            margin-left: -70px !important;
+        }
+}
