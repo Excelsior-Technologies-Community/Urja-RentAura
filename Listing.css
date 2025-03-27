@@ -219,20 +219,19 @@ color: #000;
 
 
 
-.newscroll::-webkit-scrollbar {
-    width: 5px;
-}
 
+
+.newscroll::-webkit-scrollbar {
+width: 5px;
+}
 /* Track */
 .newscroll::-webkit-scrollbar-track {
-    background: #f1f1f1;
+background: #f1f1f1;
 }
-
 /* Handle */
 .newscroll::-webkit-scrollbar-thumb {
-    background: #095a37;
-    border-radius: 1px;
-    height: 5px !important;
+background: #095a37;
+border-radius: 1px;
 }
 
 

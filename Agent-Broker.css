@@ -138,6 +138,27 @@ color: lightgray;
 
 
 
+
+
+.newscroll::-webkit-scrollbar {
+width: 5px;
+}
+/* Track */
+.newscroll::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+/* Handle */
+.newscroll::-webkit-scrollbar-thumb {
+background: #095a37;
+border-radius: 1px;
+}
+
+
+
+
+
+
+
 .form-label{
 color: #666666 !important;
 }
