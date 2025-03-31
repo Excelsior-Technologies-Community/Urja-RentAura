@@ -109,7 +109,7 @@
                                 <div class="tab-content" id="nav-tabContent">
                                     <div class="tab-pane fade show active" id="nav-signin" role="tabpanel">
                                         <form>
-                                            <p style="padding-bottom: 20px;padding-top: 10px;">Already have an account?<button class="btnstyle6" data-bs-toggle="modal" data-bs-target="#authModal" data-bs-target="#authLogin" style="color: #0E694B; font-weight: bold;padding-left: 5px;">Sign in here</button></p>
+                                            <p style="padding-bottom: 20px;padding-top: 10px;">Already have an account?<button class="btnstyle6" data-bs-toggle="modal" data-bs-target="#authModal"  style="color: #0E694B; font-weight: bold;padding-left: 5px;">Sign in here</button></p>
                                             <label for="email" class="fw-bold">Email</label>
                                             <input type="email" class="form-control mb-2" placeholder="Type here" required>
                                             <label for="psw" class="fw-bold">Password</label>
@@ -190,7 +190,7 @@
                                             <input type="password" class="form-control mb-2" placeholder="Type here" required><i class="fa-regular fa-eye eye"></i>
                                             <label for="cpsw" class="fw-bold">Confirm Password</label>
                                             <input type="password" class="form-control mb-2" placeholder="Enter Confirm Password" required><i class="fa-regular fa-eye-slash eye"></i>
-                                            <button class="btn btn-success w-100 mt-3" type="submit" data-bs-toggle="modal" data-bs-target="#authModal">Create password</button>
+                                            <button class="btn btn-success w-100 mt-3" type="button" data-bs-toggle="modal" data-bs-target="#authModal">Create password</button>
                                         </form>
                                     </div>
                                 </div>
@@ -232,6 +232,7 @@
                                 </div>
                                 <span style="padding-left: 30px;">|</span>
                                 <div>
+                                <i class="fa fa-search"></i>
                                 <input type="text" placeholder=" Quintana Roo, Mexico">
                                 <button class="search-btn">Search</button>
                                 </div>
@@ -336,7 +337,7 @@
               </div>
           </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4  hidden">
           <div class="card listing-card">
               <div class="position-relative">
                   <span class="top-listing-badge">Top Listing</span>
@@ -355,7 +356,7 @@
             </div>
           </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 hidden">
           <div class="card listing-card">
               <div class="position-relative">
                   <span class="top-listing-badge">Top Listing</span>
@@ -376,6 +377,9 @@
       </div>
   </div>
 </div>
+
+
+
 
 
 
@@ -424,8 +428,12 @@
             </div>
         </div>  
     </div>
-  </div>
+</div>
   
+
+
+
+
 
 
 
@@ -434,7 +442,7 @@
     <div class="content-box">
         <h2 class="box-content">Are you a <span class="highlight-text">Real Estate</span> professional?</h2>
         <p class="box-text">Get more eyes on your listings and move more properties faster! Promote your business to get your listings and profile <br> highlighted in homebuyers’ search results.</p>
-        <a href="#" class="btn-custom">Get your broker account now</a>
+        <a href="Agent-Broker.html"  class="btn-custom" data-bs-toggle="modal" data-bs-target="#authModal">Get your broker account now</a>
     </div>
   </div>
 
@@ -531,7 +539,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 hidden">
             <div class="card listing-card1">
                 <div class="position-relative">
                     <span class="top-listing-badge1">Top Listing</span>
@@ -550,7 +558,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 hidden">
             <div class="card listing-card1">
                 <div class="position-relative">
                     <span class="top-listing-badge1">Top Listing</span>
@@ -570,7 +578,8 @@
             </div>
         </div>
     </div>
-  </div>
+    <a href="Listing.html" class=" see-more2 hidden1 ">See more</a>
+</div>
 
 
 
@@ -741,8 +750,8 @@
 
 <div class="container my-5 blog-container">
     <div class="blog-header">
-        <h2>Our blog</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h2 class="ourblog">Our blog</h2>
+        <p class="ourblog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
     <div class="row g-4 justify-content-center">
         <div class="col-md-4">
@@ -844,62 +853,34 @@
 
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById("cityCarousel");
+    const leftBtn = document.querySelector(".pagination a:first-child");
+    const rightBtn = document.querySelector(".pagination a:last-child");
+    
+    function checkButtons() {
+        leftBtn.style.opacity = carousel.scrollLeft > 0 ? "1" : "0.5";
+        rightBtn.style.opacity = carousel.scrollLeft + carousel.clientWidth < carousel.scrollWidth ? "1" : "0.5";
+    }
+    
+    leftBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        carousel.scrollBy({ left: -300, behavior: "smooth" });
+    });
+    
+    rightBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        carousel.scrollBy({ left: 300, behavior: "smooth" });
+    });
+    
+    carousel.addEventListener("scroll", checkButtons);
+    
+    checkButtons(); // Initial check on load
+});
 
-<script>
-    // Get the modal
-    var modal = document.getElementById('id01');
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
 </script>
-<script>
-    // Get the modal
-    var modal = document.getElementById('id02');
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-<script>
-    // Get the modal
-    var modal = document.getElementById('id03');
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-<script>
-    // Get the modal
-    var modal = document.getElementById('id04');
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-<script>
-    // Get the modal
-    var modal = document.getElementById('id05');
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

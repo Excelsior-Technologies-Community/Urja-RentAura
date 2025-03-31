@@ -101,18 +101,19 @@ outline: none;
 background: transparent;
 }
 .search-btn {
-background-color: #0C6842;
-color: white;
-border: none;
-border-radius: 20px;
-padding: 8px 20px;
-}
+    background: #166534;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 30px;
+    border: none;
+    margin-left: 30px;
+    }
 .search-btn:hover {
 background-color: #095a37;
 }
 .search-icon{
 position: absolute;
-padding-left: 10px; 
+padding-left: 5px; 
 padding-top: 10px;   
 }
 .search-padding{
@@ -130,6 +131,56 @@ padding-left: 40px !important;
 
 
 
+
+
+.search-container {
+    max-width: 800px;
+    margin: auto;
+    border-radius: 12px;
+    padding: 10px;
+    }
+    .nav-tabs {
+    border: none;
+    }
+    .nav-tabs .nav-link {
+    color: #333;
+    padding: 10px 20px;
+    font-weight: bold;
+    
+    }
+    .nav-tabs .nav-link.active {
+    background-color: #166534 !important;
+    color: white !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    }
+    .buy-rent-commercial{
+    background: #faf9f9;
+    }
+    .search-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #faf9f9;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    gap: 10px;
+    }
+    .search-box select, .search-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+    background: transparent;
+    }
+    
+
+
+
+
+    
 
 
 
@@ -491,10 +542,12 @@ padding-top: 50px;
 .text-content h1 {
 font-weight: bold;
 font-size: 3rem;
+margin-top:10px ;
 }
 .text-content p {
 color: #6c757d;
 font-size: 1.1rem;
+margin-top: 10px;
 }
 .text-content .a1 {
 text-decoration: none;
@@ -694,70 +747,9 @@ color: rgb(172,170,170);
 
 
 
-
-
-
-
-
-
-
-
-
-
-.search-container {
-max-width: 800px;
-margin: auto;
-border-radius: 12px;
-padding: 10px;
+.hidden1{
+    display: none  !important;
 }
-.nav-tabs {
-border: none;
-}
-.nav-tabs .nav-link {
-color: #333;
-padding: 10px 20px;
-font-weight: bold;
-
-}
-.nav-tabs .nav-link.active {
-background-color: #166534 !important;
-color: white !important;
-border-top-left-radius: 10px;
-border-top-right-radius: 0px;
-border-bottom-left-radius: 0px;
-border-bottom-right-radius: 0px;
-}
-.buy-rent-commercial{
-background: #faf9f9;
-}
-.search-box {
-display: flex;
-align-items: center;
-padding: 10px;
-background: #faf9f9;
-border-top-right-radius: 10px;
-border-bottom-left-radius: 10px;
-border-bottom-right-radius: 10px;
-gap: 10px;
-}
-.search-box select, .search-box input {
-border: none;
-outline: none;
-flex: 1;
-background: transparent;
-}
-.search-btn {
-background: #166534;
-color: white;
-border-radius: 8px;
-padding: 10px 50px;
-border: none;
-margin-left: 30px;
-}
-
-
-
-
 
 
 
@@ -775,10 +767,28 @@ margin-left: 30px;
         font-size: 1.3rem;
         text-align: justify;
     }
+    .stats1{
+        font-size: 1.7rem;
+        padding-left: 0px;
+        }
+        .stats2 {
+            padding-right: 0px;
+            padding-left:30px ;
+        }
+   .hidden{
+    display: none;
+   }
+   .price{
+    text-align: left;
+   }
+   .pagination{
+    margin-left: -260px;
+   }
     .experience-banner{
         margin-top: 600px;
         flex-direction: column;
         padding: 15px 0px;
+        border-radius: 10px;
     }
     .bg-image{
         border-radius: 15px;
@@ -789,16 +799,51 @@ margin-left: 30px;
         box-shadow:none !important;
 
     }
+    .see-more2{
+        border: 1px solid black !important;
+        color: #0C6842  !important;
+        font-weight: bold  !important;
+        padding: 10px 20px  !important;
+        background-color: #095a37  !important;
+        border-radius: 15px  !important;
+        margin-left: 200px  !important;
+        visibility:visible  !important;
+    }
     .see-more-faq{
         flex-direction: column;
-    }
+    }.text-content h1 {
+       margin-top: 0px;
+        }
+        .text-content p {
+       margin-top: 10px !important;
+        }
+       .image-gallery{
+        
+        }
+        .blog-header{
+            flex-direction: column;
+        }
+        .customer-heading{
+            margin-top: 470px;
+        }
+        .ourblog{
+            margin-top: 590px;
+            margin-bottom: -30px;
+            margin-left: -30px;
+        }
+        .ourblog-text{
+            margin-top: 70px;
+        }
     .faq-text{
         margin-top: 650px;
         text-align: center !important;
         padding-left: 20px;
     }
+    .faq-header{
+        margin-top: 40px;
+    }
     .faq-button{
-        margin-left: 200px;
+        margin-left: 310px;
     }
     .footer-last{
         text-align: left;

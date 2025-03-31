@@ -59,7 +59,145 @@
                         <li><a class="dropdown-item" href="#">FR</a></li>
                     </ul>
                 </li>
-                <li class="nav-item paddingstyle1"><a class="btnstyle" href="#">Get Started</a></li>
+                <li class="nav-item paddingstyle1">
+                    <button class="btnstyle" data-bs-toggle="modal" data-bs-target="#authModal">Get Started</button>
+                </li> 
+                
+                <!-- Authentication Modal -->
+                <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-4">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close btn-danger"  data-bs-dismiss="modal" aria-label="Close" style="border: 1px solid red;border-radius: 50px;color: red !important;"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title fw-bold" id="modalTitle">Sign In</h2>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-signin" role="tabpanel">
+                                        <form>
+                                            <p style="padding-bottom: 20px;padding-top: 10px;">Don’t have an account?<button class="btnstyle6" data-bs-toggle="modal" data-bs-target="#authLogin" style="color: #0E694B; font-weight: bold;padding-left: 5px;">Register here</button></p>
+                                            <label for="uname" class="fw-bold">Username or Email</label>
+                                            <input type="email" class="form-control mb-2" placeholder="Type here" required>
+                                            <label for="psw" class="fw-bold">Password</label>
+                                            <input type="password" class="form-control mb-2" placeholder="Enter Password" required><i class="fa-regular fa-eye eye"></i>
+                                            <div class="d-flex justify-content-end">
+                                                <span class="psw"> <button class="btnstyle6" style="color: #0E694B;" data-bs-toggle="modal" data-bs-target="#authForgot"> Forgot password?</button></span>
+                                            </div>
+                                            <button class="btn btn-success w-100 mt-3" type="submit">Sign In</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <p class="text-center mt-3">OR</p>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <img src="img2/ic_google.png" alt="Google" style="height: 20px;">
+                                    <i class="fa-brands fa-apple text-info" style="font-size: 20px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal fade" id="authLogin" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-4">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close text-danger" data-bs-dismiss="modal" aria-label="Close" style="border: 1px solid red;border-radius: 50px;color: red;"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title fw-bold" id="modalTitle">Sign Up</h2>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-signin" role="tabpanel">
+                                        <form>
+                                            <p style="padding-bottom: 20px;padding-top: 10px;">Already have an account?<button class="btnstyle6" data-bs-toggle="modal" data-bs-target="#authModal"  style="color: #0E694B; font-weight: bold;padding-left: 5px;">Sign in here</button></p>
+                                            <label for="email" class="fw-bold">Email</label>
+                                            <input type="email" class="form-control mb-2" placeholder="Type here" required>
+                                            <label for="psw" class="fw-bold">Password</label>
+                                            <input type="password" class="form-control mb-2" placeholder="Enter Password" required><i class="fa-regular fa-eye eye"></i>
+                                            <label for="cpsw" class="fw-bold">Confirm Password</label>
+                                            <input type="password" class="form-control mb-2" placeholder="Enter Confirm password" required><i class="fa-regular fa-eye-slash eye"></i>
+                                            <button class="btn btn-success w-100 mt-3" type="submit">Register</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <p class="text-center mt-3">OR</p>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <img src="img2/ic_google.png" alt="Google" style="height: 20px;">
+                                    <i class="fa-brands fa-apple text-info" style="font-size: 20px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="authForgot" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-4">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="border: 1px solid red;border-radius: 50px;color: red;"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title fw-bold" id="modalTitle">Forgot <br> password?</h2>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-signin" role="tabpanel">
+                                        <form>
+                                            <p style="padding-bottom: 20px;padding-top: 10px;">Remember password? <button class="btnstyle6" data-bs-toggle="modal" data-bs-target="#authModal" style="color: #0E694B; font-weight: bold;padding-left: 5px;">Sign in here</button></p>
+                                            <label for="email" class="fw-bold">Email</label>
+                                            <input type="email" class="form-control mb-2" placeholder="Type here" required>
+                                            <button class="btn btn-success w-100 mt-3" type="submit" data-bs-toggle="modal" data-bs-target="#authmail">Send reset link</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="authmail" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-4">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="border: 1px solid red;border-radius: 50px;color: red;"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title fw-bold" id="modalTitle">Please check <br> your email!</h2>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-signin" role="tabpanel">
+                                        <form>
+                                            <p style="padding-top: 10px;">We've emailed a link toto acb@domain, use the link to verify and reset your account password.</p>
+                                            <p style="padding-bottom: 20px;">Didn’t received an email?  <button class="btnstyle6"  style="color: #0E694B; font-weight: bold;padding-left: 5px;"> Resend</button></p>
+                                            <button class="btn btn-success w-100 mt-3" type="submit" data-bs-toggle="modal" data-bs-target="#authpassword">Open email</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="authpassword" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-4">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="border: 1px solid red;border-radius: 50px;color: red;"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title fw-bold" id="modalTitle">Create password</h2>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-signin" role="tabpanel">
+                                        <form>
+                                            <label for="psw" class="fw-bold">New password</label>
+                                            <input type="password" class="form-control mb-2" placeholder="Type here" required><i class="fa-regular fa-eye eye"></i>
+                                            <label for="cpsw" class="fw-bold">Confirm Password</label>
+                                            <input type="password" class="form-control mb-2" placeholder="Enter Confirm Password" required><i class="fa-regular fa-eye-slash eye"></i>
+                                            <button class="btn btn-success w-100 mt-3" type="button" data-bs-toggle="modal" data-bs-target="#authModal">Create password</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
             </ul>
         </div>
     </div>
@@ -208,12 +346,23 @@
                 <div class="col-md-4">
                     <div class="card listing-card2">
                         <div class="position-relative">
-                            <span class="top-listing-badge2">Gold Listing</span>
-                            <span class="bottom-listing-badge2"><i class="fa-solid fa-chevron-left"></i> 3/5 <i class="fa-solid fa-chevron-right"></i></span>
-                            <img src="img2/Image1.png" class="card-img-top listing-img2" alt="Listing Image">
+                            <span class="top-listing-badge2">
+                                Gold Listing
+                            </span>
+                            <div class="image-container">
+                                <img id="listingImage" src="img2/Image1.png" class="card-img-top listing-img2" alt="Listing Image">
+                            </div>
+                            <span class="bottom-listing-badge2">
+                                <i class="fa-solid fa-chevron-left" id="prevSlide"></i> 
+                                <span id="currentSlide">3</span>/5 
+                                <i class="fa-solid fa-chevron-right" id="nextSlide"></i>
+                            </span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Title of the Listing will come...<i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i></h5>
+                            <h5 class="card-title fw-bold">
+                                Title of the Listing will come...
+                                <i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i>
+                            </h5>
                             <p class="text-muted pt-1"><i class="fas fa-map-marker-alt icon-red2"></i> Pluto Street, Indonesia</p>
                             <div class="d-flex justify-content-between text-muted boxstyle2">
                                 <span><i class="fas fa-table-cells-large icon-green2"></i> 800 Sq Ft</span>
@@ -229,19 +378,74 @@
                                 </div>
                             </div>
                             <hr>
-                            <p class="mt-2 price2"><span class="dollar2">$581,339.00</span> <span class="usd2">USD</span></p>
+                            <p class="mt-2 price2">
+                                <span class="dollar2">$581,339.00</span> <span class="usd2">USD</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card listing-card2">
+                        <div class="position-relative">
+                            <span class="top-listing-badge2">
+                                Gold Listing
+                            </span>
+                            <div class="image-container">
+                                <img id="listingImage" src="img2/Image17.png" class="card-img-top listing-img2" alt="Listing Image">
+                            </div>
+                            <span class="bottom-listing-badge2">
+                                <i class="fa-solid fa-chevron-left" id="prevSlide"></i> 
+                                <span id="currentSlide">3</span>/5 
+                                <i class="fa-solid fa-chevron-right" id="nextSlide"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                Title of the Listing will come...
+                                <i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i>
+                            </h5>
+                            <p class="text-muted pt-1"><i class="fas fa-map-marker-alt icon-red2"></i> Pluto Street, Indonesia</p>
+                            <div class="d-flex justify-content-between text-muted boxstyle2">
+                                <span><i class="fas fa-table-cells-large icon-green2"></i> 800 Sq Ft</span>
+                                <span><i class="fas fa-bed icon-green2"></i> 1 Bedroom</span>
+                                <span><i class="fas fa-bathtub icon-green2"></i> 2 Bathroom</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="img2/Avatar5.png" class="rounded-circle me-2" alt="User">
+                                <div class="customer">
+                                    <strong class="cust-name">Jayvion Simon</strong>
+                                    <p class="text-muted mb-0">Remax Real Estate Center</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="mt-2 price2">
+                                <span class="dollar2">$581,339.00</span> <span class="usd2">USD</span>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card listing-card2">
                         <div class="position-relative">
-                            <span class="top-listing-badge2">Gold Listing</span>
-                            <span class="bottom-listing-badge2"><i class="fa-solid fa-chevron-left"></i> 3/5 <i class="fa-solid fa-chevron-right"></i></span>
-                            <img src="img2/Image17.png" class="card-img-top listing-img2" alt="Listing Image">
+                            <span class="top-listing-badge2">
+                                Gold Listing
+                            </span>
+                            <div class="image-container">
+                                <img id="listingImage" src="img2/Image18.png" class="card-img-top listing-img2" alt="Listing Image">
+                            </div>
+                            <span class="bottom-listing-badge2">
+                                <i class="fa-solid fa-chevron-left" id="prevSlide"></i> 
+                                <span id="currentSlide">3</span>/5 
+                                <i class="fa-solid fa-chevron-right" id="nextSlide"></i>
+                            </span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Title of the Listing will come...<i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i></h5>
+                            <h5 class="card-title fw-bold">
+                                Title of the Listing will come...
+                                <i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i>
+                            </h5>
                             <p class="text-muted pt-1"><i class="fas fa-map-marker-alt icon-red2"></i> Pluto Street, Indonesia</p>
                             <div class="d-flex justify-content-between text-muted boxstyle2">
                                 <span><i class="fas fa-table-cells-large icon-green2"></i> 800 Sq Ft</span>
@@ -257,47 +461,32 @@
                                 </div>
                             </div>
                             <hr>
-                            <p class="mt-2 price2"><span class="dollar2">$581,339.00</span> <span class="usd2">USD</span></p>
-                        </div>
-                    </div>
-                </div>
-               <div class="col-md-4">
-                    <div class="card listing-card2">
-                        <div class="position-relative">
-                            <span class="top-listing-badge2">Gold Listing</span>
-                            <span class="bottom-listing-badge2"><i class="fa-solid fa-chevron-left"></i> 3/5 <i class="fa-solid fa-chevron-right"></i></span>
-                            <img src="img2/Image18.png" class="card-img-top listing-img2" alt="Listing Image">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Title of the Listing will come...<i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i></h5>
-                            <p class="text-muted pt-1"><i class="fas fa-map-marker-alt icon-red2"></i> Pluto Street, Indonesia</p>
-                            <div class="d-flex justify-content-between text-muted boxstyle2">
-                                <span><i class="fas fa-table-cells-large icon-green2"></i> 800 Sq Ft</span>
-                                <span><i class="fas fa-bed icon-green2"></i> 1 Bedroom</span>
-                                <span><i class="fas fa-bathtub icon-green2"></i> 2 Bathroom</span>
-                            </div>
-                            <hr>
-                            <div class="d-flex align-items-center mt-3">
-                                <img src="img2/Avatar5.png" class="rounded-circle me-2" alt="User">
-                                <div class="customer">
-                                    <strong class="cust-name">Jayvion Simon</strong>
-                                    <p class="text-muted mb-0">Remax Real Estate Center</p>
-                                </div>
-                            </div>
-                            <hr>
-                            <p class="mt-2 price2"><span class="dollar2">$581,339.00</span> <span class="usd2">USD</span></p>
+                            <p class="mt-2 price2">
+                                <span class="dollar2">$581,339.00</span> <span class="usd2">USD</span>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card listing-card2">
                         <div class="position-relative">
-                            <span class="top-listing-badge2">Gold Listing</span>
-                            <span class="bottom-listing-badge2"><i class="fa-solid fa-chevron-left"></i> 3/5 <i class="fa-solid fa-chevron-right"></i></span>
-                            <img src="img2/Image19.png" class="card-img-top listing-img2" alt="Listing Image">
+                            <span class="top-listing-badge2">
+                                Gold Listing
+                            </span>
+                            <div class="image-container">
+                                <img id="listingImage" src="img2/Image19.png" class="card-img-top listing-img2" alt="Listing Image">
+                            </div>
+                            <span class="bottom-listing-badge2">
+                                <i class="fa-solid fa-chevron-left" id="prevSlide"></i> 
+                                <span id="currentSlide">3</span>/5 
+                                <i class="fa-solid fa-chevron-right" id="nextSlide"></i>
+                            </span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Title of the Listing will come...<i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i></h5>
+                            <h5 class="card-title fw-bold">
+                                Title of the Listing will come...
+                                <i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i>
+                            </h5>
                             <p class="text-muted pt-1"><i class="fas fa-map-marker-alt icon-red2"></i> Pluto Street, Indonesia</p>
                             <div class="d-flex justify-content-between text-muted boxstyle2">
                                 <span><i class="fas fa-table-cells-large icon-green2"></i> 800 Sq Ft</span>
@@ -313,19 +502,32 @@
                                 </div>
                             </div>
                             <hr>
-                            <p class="mt-2 price2"><span class="dollar2">$581,339.00</span> <span class="usd2">USD</span></p>
+                            <p class="mt-2 price2">
+                                <span class="dollar2">$581,339.00</span> <span class="usd2">USD</span>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card listing-card2">
                         <div class="position-relative">
-                            <span class="top-listing-badge2">Gold Listing</span>
-                            <span class="bottom-listing-badge2"><i class="fa-solid fa-chevron-left"></i> 3/5 <i class="fa-solid fa-chevron-right"></i></span>
-                            <img src="img2/Image20.png" class="card-img-top listing-img2" alt="Listing Image">
+                            <span class="top-listing-badge2">
+                                Gold Listing
+                            </span>
+                            <div class="image-container">
+                                <img id="listingImage" src="img2/Image20.png" class="card-img-top listing-img2" alt="Listing Image">
+                            </div>
+                            <span class="bottom-listing-badge2">
+                                <i class="fa-solid fa-chevron-left" id="prevSlide"></i> 
+                                <span id="currentSlide">3</span>/5 
+                                <i class="fa-solid fa-chevron-right" id="nextSlide"></i>
+                            </span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Title of the Listing will come...<i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i></h5>
+                            <h5 class="card-title fw-bold">
+                                Title of the Listing will come...
+                                <i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i>
+                            </h5>
                             <p class="text-muted pt-1"><i class="fas fa-map-marker-alt icon-red2"></i> Pluto Street, Indonesia</p>
                             <div class="d-flex justify-content-between text-muted boxstyle2">
                                 <span><i class="fas fa-table-cells-large icon-green2"></i> 800 Sq Ft</span>
@@ -341,19 +543,32 @@
                                 </div>
                             </div>
                             <hr>
-                            <p class="mt-2 price2"><span class="dollar2">$581,339.00</span> <span class="usd2">USD</span></p>
+                            <p class="mt-2 price2">
+                                <span class="dollar2">$581,339.00</span> <span class="usd2">USD</span>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card listing-card2">
                         <div class="position-relative">
-                            <span class="top-listing-badge2">Gold Listing</span>
-                            <span class="bottom-listing-badge2"><i class="fa-solid fa-chevron-left"></i> 3/5 <i class="fa-solid fa-chevron-right"></i></span>
-                            <img src="img2/Image21.png" class="card-img-top listing-img2" alt="Listing Image">
+                            <span class="top-listing-badge2">
+                                Gold Listing
+                            </span>
+                            <div class="image-container">
+                                <img id="listingImage" src="img2/Image20.png" class="card-img-top listing-img2" alt="Listing Image">
+                            </div>
+                            <span class="bottom-listing-badge2">
+                                <i class="fa-solid fa-chevron-left" id="prevSlide"></i> 
+                                <span id="currentSlide">3</span>/5 
+                                <i class="fa-solid fa-chevron-right" id="nextSlide"></i>
+                            </span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Title of the Listing will come...<i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i></h5>
+                            <h5 class="card-title fw-bold">
+                                Title of the Listing will come...
+                                <i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i>
+                            </h5>
                             <p class="text-muted pt-1"><i class="fas fa-map-marker-alt icon-red2"></i> Pluto Street, Indonesia</p>
                             <div class="d-flex justify-content-between text-muted boxstyle2">
                                 <span><i class="fas fa-table-cells-large icon-green2"></i> 800 Sq Ft</span>
@@ -369,19 +584,32 @@
                                 </div>
                             </div>
                             <hr>
-                            <p class="mt-2 price2"><span class="dollar2">$581,339.00</span> <span class="usd2">USD</span></p>
+                            <p class="mt-2 price2">
+                                <span class="dollar2">$581,339.00</span> <span class="usd2">USD</span>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card listing-card2">
                         <div class="position-relative">
-                            <span class="top-listing-badge2">Gold Listing</span>
-                            <span class="bottom-listing-badge2"><i class="fa-solid fa-chevron-left"></i> 3/5 <i class="fa-solid fa-chevron-right"></i></span>
-                            <img src="img2/Image21.png" class="card-img-top listing-img2" alt="Listing Image">
+                            <span class="top-listing-badge2">
+                                Gold Listing
+                            </span>
+                            <div class="image-container">
+                                <img id="listingImage" src="img2/Image21.png" class="card-img-top listing-img2" alt="Listing Image">
+                            </div>
+                            <span class="bottom-listing-badge2">
+                                <i class="fa-solid fa-chevron-left" id="prevSlide"></i> 
+                                <span id="currentSlide">3</span>/5 
+                                <i class="fa-solid fa-chevron-right" id="nextSlide"></i>
+                            </span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Title of the Listing will come...<i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i></h5>
+                            <h5 class="card-title fw-bold">
+                                Title of the Listing will come...
+                                <i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i>
+                            </h5>
                             <p class="text-muted pt-1"><i class="fas fa-map-marker-alt icon-red2"></i> Pluto Street, Indonesia</p>
                             <div class="d-flex justify-content-between text-muted boxstyle2">
                                 <span><i class="fas fa-table-cells-large icon-green2"></i> 800 Sq Ft</span>
@@ -397,19 +625,32 @@
                                 </div>
                             </div>
                             <hr>
-                            <p class="mt-2 price2"><span class="dollar2">$581,339.00</span> <span class="usd2">USD</span></p>
+                            <p class="mt-2 price2">
+                                <span class="dollar2">$581,339.00</span> <span class="usd2">USD</span>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card listing-card2">
                         <div class="position-relative">
-                            <span class="top-listing-badge2">Gold Listing</span>
-                            <span class="bottom-listing-badge2"><i class="fa-solid fa-chevron-left"></i> 3/5 <i class="fa-solid fa-chevron-right"></i></span>
-                            <img src="img2/Image19.png" class="card-img-top listing-img2" alt="Listing Image">
+                            <span class="top-listing-badge2">
+                                Gold Listing
+                            </span>
+                            <div class="image-container">
+                                <img id="listingImage" src="img2/Image19.png" class="card-img-top listing-img2" alt="Listing Image">
+                            </div>
+                            <span class="bottom-listing-badge2">
+                                <i class="fa-solid fa-chevron-left" id="prevSlide"></i> 
+                                <span id="currentSlide">3</span>/5 
+                                <i class="fa-solid fa-chevron-right" id="nextSlide"></i>
+                            </span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Title of the Listing will come...<i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i></h5>
+                            <h5 class="card-title fw-bold">
+                                Title of the Listing will come...
+                                <i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i>
+                            </h5>
                             <p class="text-muted pt-1"><i class="fas fa-map-marker-alt icon-red2"></i> Pluto Street, Indonesia</p>
                             <div class="d-flex justify-content-between text-muted boxstyle2">
                                 <span><i class="fas fa-table-cells-large icon-green2"></i> 800 Sq Ft</span>
@@ -425,19 +666,32 @@
                                 </div>
                             </div>
                             <hr>
-                            <p class="mt-2 price2"><span class="dollar2">$581,339.00</span> <span class="usd2">USD</span></p>
+                            <p class="mt-2 price2">
+                                <span class="dollar2">$581,339.00</span> <span class="usd2">USD</span>
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card listing-card2">
                         <div class="position-relative">
-                            <span class="top-listing-badge2">Gold Listing</span>
-                            <span class="bottom-listing-badge2"><i class="fa-solid fa-chevron-left"></i> 3/5 <i class="fa-solid fa-chevron-right"></i></span>
-                            <img src="img2/Image22.png" class="card-img-top listing-img2" alt="Listing Image">
+                            <span class="top-listing-badge2">
+                                Gold Listing
+                            </span>
+                            <div class="image-container">
+                                <img id="listingImage" src="img2/Image22.png" class="card-img-top listing-img2" alt="Listing Image">
+                            </div>
+                            <span class="bottom-listing-badge2">
+                                <i class="fa-solid fa-chevron-left" id="prevSlide"></i> 
+                                <span id="currentSlide">3</span>/5 
+                                <i class="fa-solid fa-chevron-right" id="nextSlide"></i>
+                            </span>
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title fw-bold">Title of the Listing will come...<i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i></h5>
+                            <h5 class="card-title fw-bold">
+                                Title of the Listing will come...
+                                <i class="fa-regular fa-heart icon-green2" style="padding-left: 30px;"></i>
+                            </h5>
                             <p class="text-muted pt-1"><i class="fas fa-map-marker-alt icon-red2"></i> Pluto Street, Indonesia</p>
                             <div class="d-flex justify-content-between text-muted boxstyle2">
                                 <span><i class="fas fa-table-cells-large icon-green2"></i> 800 Sq Ft</span>
@@ -453,105 +707,41 @@
                                 </div>
                             </div>
                             <hr>
-                            <p class="mt-2 price2"><span class="dollar2">$581,339.00</span> <span class="usd2">USD</span></p>
+                            <p class="mt-2 price2">
+                                <span class="dollar2">$581,339.00</span> <span class="usd2">USD</span>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
-        <div class="container">
-            <div class="row section-Nearby">
-                <div class="col-md-5">
-                    <div class="Nearby">
-                        <h1>Nearby Neighborhoods</h1>
-                        <h2>Nearby Cities</h2>
-                    </div>
-                </div>
-                <div class="col-md-3 liststyle3">
-                    <ul class="list-unstyled">
-                        <li>Scarborough Homes for Sale</li>
-                        <li>    Etobicoke Homes for Sale</li>
-                        <li> Etobicoke Homes for Sale</li>
-                        <li> North York Homes for Sale</li>
-                        <li> Forest Hill Homes for Sale</li>
-                        <li> East York Homes for Sale</li>
-                        <li> Leaside Homes for Sale</li>
-                        <li> High Park Homes for Sale</li>
-                        <li>   Niagara Homes for Sale</li>
-                        <li> Leslieville Homes for Sale</li>
-                        <li> Rosedale Homes for Sale</li>
-                    </ul>
-                </div>
-                <div class="col-md-4 liststyle3">
-                    <ul class="list-unstyled">
-                        <li> Don Mills Homes for Sale</li>
-                        <li> Highland Creek Homes for Sale</li>
-                        <li> Rexdale Homes for Sale</li>
-                        <li> The Beach Homes for Sale</li>
-                        <li> Mimico Homes for Sale</li>
-                        <li> Bathurst Manor Homes for Sale</li>
-                        <li> Guildwood Homes for Sale</li>
-                        <li> Malvern Homes for Sale</li>
-                        <li> Bridle Path Homes for Sale</li>
-                        <li> Bloor West Village Homes for Sale</li>
-                        <li> Roncesvalles Homes for Sale</li>
-                    </ul>
-                </div>
         
-            </div>
-        </div>
-        
 
-        <div class="header-section mb-5">
-            <div class="header-section1">
-                <h1>Getting around Bay Street Corridor, Toronto, ON</h1>
-                <p>
-                    The area around Bay Street Corridor, Toronto, ON is by far a walker's paradise. With all services and amenities nearby,
-                    you really don't need a car to run your errands. Regarding transit, there are first-class public transportation options you can take advantage of.
-                    Bay Street Corridor, Toronto, ON is in a very bikeable community, so you'll have a developed cycling infrastructure at your disposal.<br>
-                    Powered by <a href="#" class="text-white text-decoration-underline">Walk Score<sup>&reg;</sup></a>
-                </p>
+
+
+
+
+        
+        <div class="container align-items-center">
+            <div class="pagination">
+              <a href="#"><i class="fa-solid fa-chevron-left"></i> </a>
+              <a href="#" class="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#">6</a>
+              <a href="#"><i class="fa-solid fa-chevron-right"></i> </a>
             </div>
-            <div class="container my-4">
-                <div class="row g-3  score-box">
-                    <div class="col-md-4">
-                        <div class="score-card">
-                            <div class="score-border">
-                                <img src="img2/Circular Progress indicator.png" alt="">
-                            </div>
-                            <div>
-                                <h5 style="color: #185f3e;font-weight: bold;font-size: 1.5rem;">Walker's <br> Paradise</h5>
-                                <p style="color: gray;">Walk Score&reg;</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="score-card">
-                            <div class="score-border">
-                                <img src="img2/Circular Progress indicator (1).png" alt="">
-                            </div>
-                            <div>
-                                <h5 style="color: #004aad;font-weight: bold;font-size: 1.5rem;">Rider's <br> Paradise</h5>
-                                <p style="color: gray;">Transit Score&reg;</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="score-card">
-                            <div class="score-border">
-                                <img src="img2/Circular Progress indicator (2).png" alt="">
-                            </div>
-                            <div>
-                                <h5 style="color: #68b723; font-weight: bold;font-size: 1.5rem;">Very <br> Bikeable</h5>
-                                <p style="color: gray;">Bike Score&reg;</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p class="pagination-text">1 - 9 of 1,714 Results</p>
         </div>
+
+
+
+
+
+
 
 
         <div class="container mt-5 mb-5">
@@ -620,21 +810,109 @@
         </div>
 
 
-        <div class="container align-items-center">
-            <div class="pagination">
-              <a href="#"><i class="fa-solid fa-chevron-left"></i> </a>
-              <a href="#" class="active">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-              <a href="#">6</a>
-              <a href="#"><i class="fa-solid fa-chevron-right"></i> </a>
+
+
+
+
+
+
+        <div class="header-section mb-5">
+            <div class="header-section1">
+                <h1>Getting around Bay Street Corridor, Toronto, ON</h1>
+                <p>
+                    The area around Bay Street Corridor, Toronto, ON is by far a walker's paradise. With all services and amenities nearby,
+                    you really don't need a car to run your errands. Regarding transit, there are first-class public transportation options you can take advantage of.
+                    Bay Street Corridor, Toronto, ON is in a very bikeable community, so you'll have a developed cycling infrastructure at your disposal.<br>
+                    Powered by <a href="#" class="text-white text-decoration-underline">Walk Score<sup>&reg;</sup></a>
+                </p>
             </div>
-            <p class="pagination-text">1 - 9 of 1,714 Results</p>
+            <div class="container my-4">
+                <div class="row g-3  score-box">
+                    <div class="col-md-4">
+                        <div class="score-card">
+                            <div class="score-border">
+                                <img src="img2/Circular Progress indicator.png" alt="">
+                            </div>
+                            <div>
+                                <h5 style="color: #185f3e;font-weight: bold;font-size: 1.5rem;">Walker's <br> Paradise</h5>
+                                <p style="color: gray;">Walk Score&reg;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="score-card">
+                            <div class="score-border">
+                                <img src="img2/Circular Progress indicator (1).png" alt="">
+                            </div>
+                            <div>
+                                <h5 style="color: #004aad;font-weight: bold;font-size: 1.5rem;">Rider's <br> Paradise</h5>
+                                <p style="color: gray;">Transit Score&reg;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="score-card">
+                            <div class="score-border">
+                                <img src="img2/Circular Progress indicator (2).png" alt="">
+                            </div>
+                            <div>
+                                <h5 style="color: #68b723; font-weight: bold;font-size: 1.5rem;">Very <br> Bikeable</h5>
+                                <p style="color: gray;">Bike Score&reg;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-    </div>
+
+
+
+        
+
+        <div class="container">
+            <div class="row section-Nearby">
+                <div class="col-md-5">
+                    <div class="Nearby">
+                        <h1>Nearby Neighborhoods</h1>
+                        <h2>Nearby Cities</h2>
+                    </div>
+                </div>
+                <div class="col-md-3 liststyle3">
+                    <ul class="list-unstyled">
+                        <li>Scarborough Homes for Sale</li>
+                        <li>    Etobicoke Homes for Sale</li>
+                        <li> Etobicoke Homes for Sale</li>
+                        <li> North York Homes for Sale</li>
+                        <li> Forest Hill Homes for Sale</li>
+                        <li> East York Homes for Sale</li>
+                        <li> Leaside Homes for Sale</li>
+                        <li> High Park Homes for Sale</li>
+                        <li>   Niagara Homes for Sale</li>
+                        <li> Leslieville Homes for Sale</li>
+                        <li> Rosedale Homes for Sale</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 liststyle3">
+                    <ul class="list-unstyled">
+                        <li> Don Mills Homes for Sale</li>
+                        <li> Highland Creek Homes for Sale</li>
+                        <li> Rexdale Homes for Sale</li>
+                        <li> The Beach Homes for Sale</li>
+                        <li> Mimico Homes for Sale</li>
+                        <li> Bathurst Manor Homes for Sale</li>
+                        <li> Guildwood Homes for Sale</li>
+                        <li> Malvern Homes for Sale</li>
+                        <li> Bridle Path Homes for Sale</li>
+                        <li> Bloor West Village Homes for Sale</li>
+                        <li> Roncesvalles Homes for Sale</li>
+                    </ul>
+                </div>
+        
+            </div>
+        </div>
+
+   </div>
 
 
 
@@ -1000,7 +1278,35 @@
 
 
 
+<script>
+    
+    document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".listing-card2").forEach((card) => {
+        let currentIndex = 1;
+        const totalSlides = 5;
+        const image = card.querySelector("#listingImage");
+        const slideCounter = card.querySelector("#currentSlide");
 
+        function updateImage() {
+            const baseSrc = image.src.replace(/\d+(\.\w+)$/, "");
+            const ext = image.src.split(".").pop(); 
+            image.src = `${baseSrc}${currentIndex}.${ext}`;
+            slideCounter.textContent = currentIndex;
+        }
+
+        card.querySelector("#prevSlide").addEventListener("click", function () {
+            currentIndex = currentIndex > 1 ? currentIndex - 1 : totalSlides;
+            updateImage();
+        });
+
+        card.querySelector("#nextSlide").addEventListener("click", function () {
+            currentIndex = currentIndex < totalSlides ? currentIndex + 1 : 1;
+            updateImage();
+        });
+    });
+});
+
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

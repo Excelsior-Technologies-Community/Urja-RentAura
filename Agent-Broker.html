@@ -58,8 +58,145 @@
                         <li><a class="dropdown-item" href="#">FR</a></li>
                     </ul>
                 </li>
-                <li class="nav-item paddingstyle1"><a class="btnstyle" href="#">Get Started</a></li>
-            </ul>
+                <li class="nav-item paddingstyle1">
+                    <button class="btnstyle" data-bs-toggle="modal" data-bs-target="#authModal">Get Started</button>
+                </li> 
+                
+                <!-- Authentication Modal -->
+                <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-4">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close btn-danger"  data-bs-dismiss="modal" aria-label="Close" style="border: 1px solid red;border-radius: 50px;color: red !important;"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title fw-bold" id="modalTitle">Sign In</h2>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-signin" role="tabpanel">
+                                        <form>
+                                            <p style="padding-bottom: 20px;padding-top: 10px;">Don’t have an account?<button class="btnstyle6" data-bs-toggle="modal" data-bs-target="#authLogin" style="color: #0E694B; font-weight: bold;padding-left: 5px;">Register here</button></p>
+                                            <label for="uname" class="fw-bold">Username or Email</label>
+                                            <input type="email" class="form-control mb-2" placeholder="Type here" required>
+                                            <label for="psw" class="fw-bold">Password</label>
+                                            <input type="password" class="form-control mb-2" placeholder="Enter Password" required><i class="fa-regular fa-eye eye"></i>
+                                            <div class="d-flex justify-content-end">
+                                                <span class="psw"> <button class="btnstyle6" style="color: #0E694B;" data-bs-toggle="modal" data-bs-target="#authForgot"> Forgot password?</button></span>
+                                            </div>
+                                            <button class="btn btn-success w-100 mt-3" type="submit">Sign In</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <p class="text-center mt-3">OR</p>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <img src="img2/ic_google.png" alt="Google" style="height: 20px;">
+                                    <i class="fa-brands fa-apple text-info" style="font-size: 20px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal fade" id="authLogin" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-4">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close text-danger" data-bs-dismiss="modal" aria-label="Close" style="border: 1px solid red;border-radius: 50px;color: red;"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title fw-bold" id="modalTitle">Sign Up</h2>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-signin" role="tabpanel">
+                                        <form>
+                                            <p style="padding-bottom: 20px;padding-top: 10px;">Already have an account?<button class="btnstyle6" data-bs-toggle="modal" data-bs-target="#authModal"  style="color: #0E694B; font-weight: bold;padding-left: 5px;">Sign in here</button></p>
+                                            <label for="email" class="fw-bold">Email</label>
+                                            <input type="email" class="form-control mb-2" placeholder="Type here" required>
+                                            <label for="psw" class="fw-bold">Password</label>
+                                            <input type="password" class="form-control mb-2" placeholder="Enter Password" required><i class="fa-regular fa-eye eye"></i>
+                                            <label for="cpsw" class="fw-bold">Confirm Password</label>
+                                            <input type="password" class="form-control mb-2" placeholder="Enter Confirm password" required><i class="fa-regular fa-eye-slash eye"></i>
+                                            <button class="btn btn-success w-100 mt-3" type="submit">Register</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <p class="text-center mt-3">OR</p>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <img src="img2/ic_google.png" alt="Google" style="height: 20px;">
+                                    <i class="fa-brands fa-apple text-info" style="font-size: 20px;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="authForgot" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-4">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="border: 1px solid red;border-radius: 50px;color: red;"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title fw-bold" id="modalTitle">Forgot <br> password?</h2>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-signin" role="tabpanel">
+                                        <form>
+                                            <p style="padding-bottom: 20px;padding-top: 10px;">Remember password? <button class="btnstyle6" data-bs-toggle="modal" data-bs-target="#authModal" style="color: #0E694B; font-weight: bold;padding-left: 5px;">Sign in here</button></p>
+                                            <label for="email" class="fw-bold">Email</label>
+                                            <input type="email" class="form-control mb-2" placeholder="Type here" required>
+                                            <button class="btn btn-success w-100 mt-3" type="submit" data-bs-toggle="modal" data-bs-target="#authmail">Send reset link</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="authmail" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-4">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="border: 1px solid red;border-radius: 50px;color: red;"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title fw-bold" id="modalTitle">Please check <br> your email!</h2>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-signin" role="tabpanel">
+                                        <form>
+                                            <p style="padding-top: 10px;">We've emailed a link toto acb@domain, use the link to verify and reset your account password.</p>
+                                            <p style="padding-bottom: 20px;">Didn’t received an email?  <button class="btnstyle6"  style="color: #0E694B; font-weight: bold;padding-left: 5px;"> Resend</button></p>
+                                            <button class="btn btn-success w-100 mt-3" type="submit" data-bs-toggle="modal" data-bs-target="#authpassword">Open email</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="authpassword" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content p-4">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="border: 1px solid red;border-radius: 50px;color: red;"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h2 class="modal-title fw-bold" id="modalTitle">Create password</h2>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-signin" role="tabpanel">
+                                        <form>
+                                            <label for="psw" class="fw-bold">New password</label>
+                                            <input type="password" class="form-control mb-2" placeholder="Type here" required><i class="fa-regular fa-eye eye"></i>
+                                            <label for="cpsw" class="fw-bold">Confirm Password</label>
+                                            <input type="password" class="form-control mb-2" placeholder="Enter Confirm Password" required><i class="fa-regular fa-eye-slash eye"></i>
+                                            <button class="btn btn-success w-100 mt-3" type="button" data-bs-toggle="modal" data-bs-target="#authModal">Create password</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                  </ul>
         </div>
     </div>
 </nav>
